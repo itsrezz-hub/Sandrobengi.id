@@ -39,6 +39,26 @@
 
   <!-- Third-Party CSS Frameworks & Libraries -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00AEEF',
+            secondary: '#14B8A6',
+            accent: '#F6C453',
+            dark: '#020617',
+            cardDark: '#0F172A',
+            darkBg: '#020617'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
@@ -46,7 +66,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-dark text-slate-100 font-body antialiased selection:bg-primary selection:text-white">
+<body class="bg-dark text-slate-100 font-sans antialiased selection:bg-primary selection:text-white">
 
   <!-- LOADING SCREEN -->
   <div id="loading-screen" class="fixed inset-0 z-[100] bg-dark flex flex-col items-center justify-center transition-opacity duration-500">
@@ -57,19 +77,17 @@
   <!-- NAVIGATION BAR -->
   <nav class="sticky top-0 z-40 w-full glass-nav transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- LOGO GABUNGAN (GAMBAR + TEKS) -->
       <!-- LOGO BULAT + TEKS BRAND -->
       <a href="#" class="flex items-center gap-3 font-heading font-black text-xl sm:text-2xl tracking-tight text-white group">
-        <!-- Gambar Logo Dibuat Bulat Sempurna -->
         <img 
           src="assets/images/logo.png" 
           alt="Sanrobengi.id Logo" 
           class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover border-2 border-cyan-400/40 shadow-md shadow-cyan-500/20 group-hover:scale-105 group-hover:border-cyan-400 transition-all duration-300"
         >
-        
-        <!-- Teks Brand -->
         <span>SANROBENGI<span class="text-cyan-400 font-bold">.ID</span></span>
       </a>
+
+      <!-- Desktop Navigation Menu -->
       <div class="hidden lg:flex items-center gap-8 font-medium text-slate-300 text-sm">
         <a href="#about" class="hover:text-primary transition-colors">Tentang</a>
         <a href="#why-us" class="hover:text-primary transition-colors">Keunggulan</a>
@@ -80,14 +98,14 @@
       </div>
 
       <div class="hidden sm:flex items-center gap-4">
-        <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20ingin%20tanya%20paket%20Open%20Trip%20Sanrobengi" target="_blank" 
-           class="relative inline-flex items-center justify-center gap-2 px-6 py-3 font-bold text-dark font-heading bg-gradient-to-r from-accent to-amber-400 rounded-full shadow-lg hover:shadow-accent/40 hover:scale-105 transition-all">
+        <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20ingin%20tanya%20paket%20Open%20Trip%20Sanrobengi" target="_blank" rel="noopener noreferrer" 
+           class="relative inline-flex items-center justify-center gap-2 px-6 py-3 font-bold text-dark font-heading bg-gradient-to-r from-accent to-amber-400 rounded-full shadow-lg hover:shadow-accent/40 hover:scale-105 transition-all btn-ripple">
           <i data-lucide="message-circle" class="w-4 h-4"></i>
           Chat WhatsApp
         </a>
       </div>
 
-      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-300 hover:text-white" aria-label="Open Menu">
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Open Menu">
         <i data-lucide="menu" class="w-7 h-7"></i>
       </button>
     </div>
@@ -97,11 +115,10 @@
       <a href="#about" class="block font-medium text-slate-200 hover:text-primary py-1">Tentang</a>
       <a href="#why-us" class="block font-medium text-slate-200 hover:text-primary py-1">Keunggulan</a>
       <a href="#packages" class="block font-medium text-slate-200 hover:text-primary py-1">Paket Trip</a>
-      <a href="#activities" class="block font-medium text-slate-200 hover:text-primary py-1">Aktivitas</a>
       <a href="#gallery" class="block font-medium text-slate-200 hover:text-primary py-1">Galeri</a>
       <a href="#testimonials" class="block font-medium text-slate-200 hover:text-primary py-1">Testimoni</a>
       <a href="#faq" class="block font-medium text-slate-200 hover:text-primary py-1">FAQ</a>
-      <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20tanya%20paket%20Open%20Trip%20Sanrobengi" target="_blank" 
+      <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20ingin%20tanya%20paket%20Open%20Trip%20Sanrobengi" target="_blank" rel="noopener noreferrer" 
          class="flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-secondary text-white w-full py-3.5 rounded-xl font-bold shadow-lg">
         <i data-lucide="message-circle" class="w-5 h-5"></i>
         Hubungi WhatsApp Admin
@@ -111,7 +128,7 @@
 
   <!-- HERO SECTION WITH VIDEO BACKGROUND -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-12 pb-24">
-    <!-- Hero Video Placeholder / Background -->
+    <!-- Hero Video Background -->
     <div class="absolute inset-0 z-0">
       <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-30">
         <source src="assets/video/hero-bg.mp4" type="video/mp4">
@@ -138,10 +155,10 @@
       </p>
 
       <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-        <a href="#packages" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-extrabold text-base shadow-xl shadow-primary/30 hover:scale-105 transition-all">
+        <a href="#packages" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-extrabold text-base shadow-xl shadow-primary/30 hover:scale-105 transition-all text-center">
           Lihat Paket Trip
         </a>
-        <a href="#gallery" class="w-full sm:w-auto px-8 py-4 rounded-full glass-light text-slate-200 font-bold text-base hover:bg-white/10 transition-all border border-white/10">
+        <a href="#gallery" class="w-full sm:w-auto px-8 py-4 rounded-full glass-light text-slate-200 font-bold text-base hover:bg-white/10 transition-all border border-white/10 text-center">
           Eksplor Galeri
         </a>
       </div>
@@ -250,20 +267,20 @@
               <span class="text-slate-400 text-xs">/ pax</span>
             </div>
             <ul class="space-y-3 text-slate-300 text-xs sm:text-sm">
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary"></i>transportasi</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary"></i>Konsumsi</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary"></i>Padle Board</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary"></i>Dokumentasi Foto & Drone</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary"></i> Transportasi Kapal PP</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary"></i> Konsumsi Makan Siang</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary"></i> Paddle Board & Alat Snorkeling</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary"></i> Dokumentasi Foto & Drone</li>
             </ul>
           </div>
-          <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20mau%20pesan%20Paket%20Day%20Trip" target="_blank" class="mt-8 block text-center py-4 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/10 transition-all">Pesan Day Trip</a>
+          <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20mau%20pesan%20Paket%20Day%20Trip" target="_blank" rel="noopener noreferrer" class="mt-8 block text-center py-4 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/10 transition-all">Pesan Day Trip</a>
         </div>
 
         <!-- Camping 2D1N -->
         <div data-aos="fade-up" data-aos-delay="100" class="rounded-3xl bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 p-8 md:p-10 border-2 border-primary/80 shadow-2xl flex flex-col justify-between relative overflow-hidden">
           <div class="absolute top-0 right-0 bg-gradient-to-l from-accent to-amber-500 text-dark font-black text-[10px] uppercase tracking-wider px-4 py-1.5 rounded-bl-xl">POPULER</div>
           <div>
-            <span class="text-xs font-extrabold uppercase tracking-widest text-amber-300 bg-amber-400/10 px-3 py-1 rounded-full">Private Trip</span>
+            <span class="text-xs font-extrabold uppercase tracking-widest text-amber-300 bg-amber-400/10 px-3 py-1 rounded-full">Private / Open Trip</span>
             <h3 class="text-2xl font-black text-white mt-4 font-heading">Island Camping 2D1N</h3>
             <p class="text-slate-400 text-xs mt-2">Sensasi bermalam di bawah ribuan bintang.</p>
             <div class="my-6">
@@ -271,13 +288,13 @@
               <span class="text-slate-400 text-xs">/ pax</span>
             </div>
             <ul class="space-y-3 text-slate-200 text-xs sm:text-sm">
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i>Semua Fasilitas Day Trip</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i>Tenda Dome Kapasitas 4</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i>Pesta BBQ Ikan Bakar & Api Unggun</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i>Dokumentasi Foto,Video,Drone</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Semua Fasilitas Day Trip</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Tenda Dome Kapasitas 4</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Pesta BBQ Ikan Bakar & Api Unggun</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Dokumentasi Foto, Video, Drone</li>
             </ul>
           </div>
-          <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20mau%20pesan%20Paket%20Camping%202D1N" target="_blank" class="mt-8 block text-center py-4 rounded-2xl bg-gradient-to-r from-primary to-secondary text-white font-extrabold text-sm shadow-lg shadow-primary/30 transition-all">Pesan Slot Camping</a>
+          <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20mau%20pesan%20Paket%20Camping%202D1N" target="_blank" rel="noopener noreferrer" class="mt-8 block text-center py-4 rounded-2xl bg-gradient-to-r from-primary to-secondary text-white font-extrabold text-sm shadow-lg shadow-primary/30 transition-all">Pesan Slot Camping</a>
         </div>
       </div>
     </div>
@@ -301,13 +318,13 @@
           <img src="assets/images/gallery-3.jpg" alt="Sanrobengi Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
         </a>
         <a href="assets/images/gallery-4.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-          <img src="assets/images/gallery-4.jpg" alt="Sanrobengi Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+          <img src="assets/images/gallery-4.jpg" alt="Sanrobengi Water Activities" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
         </a>
         <a href="assets/images/gallery-5.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-          <img src="assets/images/gallery-5.jpg" alt="Sanrobengi Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+          <img src="assets/images/gallery-5.jpg" alt="Sanrobengi Drone View" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
         </a>
         <a href="assets/images/gallery-6.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-          <img src="assets/images/gallery-6.jpg" alt="Sanrobengi Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+          <img src="assets/images/gallery-6.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
         </a>
       </div>
     </div>
@@ -379,8 +396,9 @@
   </footer>
 
   <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20ingin%20tanya%20Open%20Trip%20Sanrobengi" target="_blank" 
-     class="fixed bottom-6 right-6 z-50 p-4 bg-emerald-500 hover:bg-emerald-400 text-white rounded-full shadow-2xl shadow-emerald-500/50 hover:scale-110 transition-all flex items-center justify-center animate-bounce">
+  <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20ingin%20tanya%20Open%20Trip%20Sanrobengi" target="_blank" rel="noopener noreferrer"
+     class="fixed bottom-6 right-6 z-50 p-4 bg-emerald-500 hover:bg-emerald-400 text-white rounded-full shadow-2xl shadow-emerald-500/50 hover:scale-110 transition-all flex items-center justify-center animate-bounce"
+     aria-label="Chat WhatsApp">
     <i data-lucide="message-circle" class="w-7 h-7"></i>
   </a>
 
