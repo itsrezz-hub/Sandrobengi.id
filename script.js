@@ -9,15 +9,21 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
   }
 
-  // 2. Hide Loading Screen
+  // 2. Hide Loading Screen (Aman dari race condition saat page direload)
   const loadingScreen = document.getElementById('loading-screen');
   if (loadingScreen) {
-    window.addEventListener('load', () => {
+    const hideLoading = () => {
       loadingScreen.classList.add('opacity-0');
       setTimeout(() => {
         loadingScreen.style.display = 'none';
       }, 500);
-    });
+    };
+
+    if (document.readyState === 'complete') {
+      hideLoading();
+    } else {
+      window.addEventListener('load', hideLoading);
+    }
   }
 
   // 3. Logika Navbar Scroll Effect
@@ -82,14 +88,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Inisialisasi Fancybox (Lightbox Galeri Foto)
+  // 7. Inisialisasi Fancybox (Lightbox Galeri Foto + Fix Re-opening Bug)
   if (typeof Fancybox !== 'undefined') {
+    // Unbind event bawaan untuk cegah double execution
+    Fancybox.unbind('[data-fancybox="gallery"]');
+
     Fancybox.bind('[data-fancybox="gallery"]', {
       compact: false,
       idle: false,
       animated: true,
       showClass: 'f-fadeIn',
       hideClass: 'f-fadeOut',
+      Hash: false,            // Matikan perubahan URL hash agar galeri tidak terbuka lagi
+      placeFocusBack: false   // Matikan fokus otomatis kembali ke trigger elemen
     });
   }
 
