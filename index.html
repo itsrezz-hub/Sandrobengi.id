@@ -250,150 +250,206 @@
     </div>
   </section>
 
-  <!-- GALLERY MASONRY (FANCYBOX) -->
-<section id="gallery" class="py-24">
+<!-- GALLERY CAROUSEL (FANCYBOX + AUTO SLIDE) -->
+<section id="gallery" class="py-24 bg-[#080c15] overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <span class="text-primary font-bold uppercase tracking-widest text-xs">Our Documentation</span>
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="text-cyan-400 font-bold uppercase tracking-widest text-xs">Dokumentasi</span>
       <h2 class="text-3xl sm:text-4xl font-black text-white font-heading mt-2">Keindahan Pulau Sanrobengi</h2>
     </div>
 
-    <!-- Gallery Grid -->
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-      <!-- 9 Foto Utama (Selalu Tampil) -->
-      <a href="assets/images/gallery-1.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-        <img src="assets/images/gallery-1.jpg" alt="Sanrobengi Beach" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-      </a>
-      <a href="assets/images/gallery-2.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-        <img src="assets/images/gallery-2.jpg" alt="Sanrobengi Sunset" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-      </a>
-      <a href="assets/images/gallery-3.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-        <img src="assets/images/gallery-3.jpg" alt="Sanrobengi Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-      </a>
-      <a href="assets/images/gallery-4.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-        <img src="assets/images/gallery-4.jpg" alt="Sanrobengi Water Activities" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-      </a>
-      <a href="assets/images/gallery-5.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-        <img src="assets/images/gallery-5.jpg" alt="Sanrobengi Drone View" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-      </a>
-      <a href="assets/images/gallery-6.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-        <img src="assets/images/gallery-6.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-      </a>
-      <a href="assets/images/gallery-7.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-        <img src="assets/images/gallery-7.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-      </a>
-      <a href="assets/images/gallery-8.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-        <img src="assets/images/gallery-8.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-      </a>
-      <a href="assets/images/gallery-9.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-        <img src="assets/images/gallery-9.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-      </a>
-
-      <!-- Wrapper Foto Tambahan dengan Grid Rows Smooth Height -->
-      <div id="extra-gallery" class="col-span-2 md:col-span-3 grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out">
-        <div class="overflow-hidden">
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pt-4">
-            
-            <!-- Item Tambahan (Diawali opacity-0 & translate-y-6) -->
-            <a href="assets/images/gallery-10.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
-              <img src="assets/images/gallery-10.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+    <!-- Carousel Wrapper -->
+    <div class="relative group" id="carousel-wrapper" onmouseenter="pauseAutoSlide()" onmouseleave="startAutoSlide()">
+      
+      <!-- Track Container -->
+      <div class="overflow-hidden rounded-3xl">
+        <div id="gallery-track" class="flex transition-transform duration-700 ease-in-out">
+          
+          <!-- Slide Item 1 -->
+          <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 p-2">
+            <a href="assets/images/gallery-1.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-72 block group/item border border-slate-800 hover:border-cyan-500/50 transition-all">
+              <img src="assets/images/gallery-1.jpg" alt="Sanrobengi Beach" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-500">
             </a>
-            <a href="assets/images/gallery-11.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
-              <img src="assets/images/gallery-11.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-            </a>
-            <a href="assets/images/gallery-12.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
-              <img src="assets/images/gallery-12.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-            </a>
-            <a href="assets/images/gallery-13.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
-              <img src="assets/images/gallery-13.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-            </a>
-            <a href="assets/images/gallery-14.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
-              <img src="assets/images/gallery-14.jpg" alt="Sanrobengi Sunset View" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-            </a>
-            <a href="assets/images/gallery-15.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
-              <img src="assets/images/gallery-15.jpg" alt="Aktivitas Snorkeling Sanrobengi" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-            </a>
-            <a href="assets/images/gallery-16.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
-              <img src="assets/images/gallery-16.jpg" alt="Perahu Penyeberangan Sanrobengi" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-            </a>
-            <a href="assets/images/gallery-17.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
-              <img src="assets/images/gallery-17.jpg" alt="Keindahan Pasir Putih Sanrobengi" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-            </a>
-            <a href="assets/images/gallery-18.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
-              <img src="assets/images/gallery-18.jpg" alt="Peserta Open Trip Sanrobengi" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-            </a>
-            <a href="assets/images/gallery-19.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
-              <img src="assets/images/gallery-19.jpg" alt="Api Unggun Pantai Sanrobengi" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-            </a>
-            <a href="assets/images/gallery-20.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
-              <img src="assets/images/gallery-20.jpg" alt="Pemandangan Laut Pulau Sanrobengi" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-            </a>
-            <a href="assets/images/gallery-21.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
-              <img src="assets/images/gallery-21.jpg" alt="Pemandangan Laut Pulau Sanrobengi" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-            </a>
-
           </div>
+
+          <!-- Slide Item 2 -->
+          <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 p-2">
+            <a href="assets/images/gallery-2.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-72 block group/item border border-slate-800 hover:border-cyan-500/50 transition-all">
+              <img src="assets/images/gallery-2.jpg" alt="Sanrobengi Sunset" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-500">
+            </a>
+          </div>
+
+          <!-- Slide Item 3 -->
+          <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 p-2">
+            <a href="assets/images/gallery-3.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-72 block group/item border border-slate-800 hover:border-cyan-500/50 transition-all">
+              <img src="assets/images/gallery-3.jpg" alt="Sanrobengi Camping" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-500">
+            </a>
+          </div>
+
+          <!-- Slide Item 4 -->
+          <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 p-2">
+            <a href="assets/images/gallery-4.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-72 block group/item border border-slate-800 hover:border-cyan-500/50 transition-all">
+              <img src="assets/images/gallery-4.jpg" alt="Sanrobengi Water Activities" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-500">
+            </a>
+          </div>
+
+          <!-- Slide Item 5 -->
+          <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 p-2">
+            <a href="assets/images/gallery-5.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-72 block group/item border border-slate-800 hover:border-cyan-500/50 transition-all">
+              <img src="assets/images/gallery-5.jpg" alt="Sanrobengi Drone View" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-500">
+            </a>
+          </div>
+
+          <!-- Slide Item 6 -->
+          <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 p-2">
+            <a href="assets/images/gallery-6.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-72 block group/item border border-slate-800 hover:border-cyan-500/50 transition-all">
+              <img src="assets/images/gallery-6.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-500">
+            </a>
+          </div>
+
+          <!-- Slide Item 7 -->
+          <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 p-2">
+            <a href="assets/images/gallery-7.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-72 block group/item border border-slate-800 hover:border-cyan-500/50 transition-all">
+              <img src="assets/images/gallery-7.jpg" alt="Sanrobengi Sunset View" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-500">
+            </a>
+          </div>
+
+          <!-- Slide Item 8 -->
+          <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 p-2">
+            <a href="assets/images/gallery-8.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-72 block group/item border border-slate-800 hover:border-cyan-500/50 transition-all">
+              <img src="assets/images/gallery-8.jpg" alt="Snorkeling Sanrobengi" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-500">
+            </a>
+          </div>
+
+          <!-- Slide Item 9 -->
+          <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 p-2">
+            <a href="assets/images/gallery-9.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-72 block group/item border border-slate-800 hover:border-cyan-500/50 transition-all">
+              <img src="assets/images/gallery-9.jpg" alt="Perahu Sanrobengi" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-500">
+            </a>
+          </div>
+
         </div>
       </div>
+
+      <!-- Tombol Navigasi Kiri -->
+      <button onclick="prevSlide()" class="absolute left-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-2xl bg-slate-900/80 hover:bg-cyan-500 hover:text-slate-950 text-white border border-slate-700/80 backdrop-blur-md flex items-center justify-center transition-all duration-300 shadow-xl opacity-0 group-hover:opacity-100 z-10">
+        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+      </button>
+
+      <!-- Tombol Navigasi Kanan -->
+      <button onclick="nextSlide()" class="absolute right-2 top-1/2 -translate-y-1/2 w-12 h-12 rounded-2xl bg-slate-900/80 hover:bg-cyan-500 hover:text-slate-950 text-white border border-slate-700/80 backdrop-blur-md flex items-center justify-center transition-all duration-300 shadow-xl opacity-0 group-hover:opacity-100 z-10">
+        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+      </button>
+
     </div>
 
-    <!-- Tombol Toggle -->
-    <div id="gallery-btn-container" class="text-center mt-12">
-      <button id="gallery-toggle-btn" onclick="toggleGallery()" class="px-8 py-3.5 bg-primary/10 hover:bg-primary text-primary hover:text-white border border-primary/30 rounded-2xl font-bold text-sm transition-all duration-300 inline-flex items-center gap-2 shadow-lg shadow-primary/10">
-        <span id="gallery-btn-text">Lihat Lebih Banyak</span>
-        <i id="gallery-btn-icon" data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
-      </button>
-    </div>
+    <!-- Indicator Dots (Opsional) -->
+    <div id="carousel-dots" class="flex justify-center items-center gap-2 mt-8"></div>
+
   </div>
 </section>
 
-<!-- Script Staggered Fade-In Animation -->
+<!-- Script Smooth Auto Carousel -->
 <script>
-  function toggleGallery() {
-    const extraGallery = document.getElementById('extra-gallery');
-    const extraItems = document.querySelectorAll('.gallery-extra-item');
-    const btnText = document.getElementById('gallery-btn-text');
-    const btnIcon = document.getElementById('gallery-btn-icon');
+  let currentIndex = 0;
+  let autoSlideInterval;
+  const track = document.getElementById('gallery-track');
+  const slides = track.children;
+  const totalSlides = slides.length;
 
-    const isOpen = extraGallery.classList.contains('grid-rows-[1fr]');
+  // Menentukan berapa banyak slide yang tampil berdasarkan lebar layar
+  function getVisibleSlides() {
+    if (window.innerWidth >= 1024) return 3; // Desktop: 3 foto
+    if (window.innerWidth >= 640) return 2;  // Tablet: 2 foto
+    return 1;                                // HP: 1 foto
+  }
 
-    if (!isOpen) {
-      // 1. Buka kontainer tinggi
-      extraGallery.classList.remove('grid-rows-[0fr]');
-      extraGallery.classList.add('grid-rows-[1fr]');
+  // Update posisi slider
+  function updateCarousel() {
+    const visibleSlides = getVisibleSlides();
+    const maxIndex = totalSlides - visibleSlides;
 
-      // 2. Tampilkan tiap foto berurutan (Staggered delay 70ms)
-      extraItems.forEach((item, index) => {
-        item.style.transitionDelay = `${index * 70}ms`;
-        item.classList.remove('opacity-0', 'translate-y-6');
-        item.classList.add('opacity-100', 'translate-y-0');
-      });
-
-      btnText.textContent = 'Lihat Lebih Sedikit';
-      btnIcon.setAttribute('data-lucide', 'chevron-up');
-    } else {
-      // 1. Sembunyikan item dengan cepat tanpa jeda delay
-      extraItems.forEach((item) => {
-        item.style.transitionDelay = '0ms';
-        item.classList.remove('opacity-100', 'translate-y-0');
-        item.classList.add('opacity-0', 'translate-y-6');
-      });
-
-      // 2. Tutup kontainer tinggi
-      extraGallery.classList.remove('grid-rows-[1fr]');
-      extraGallery.classList.add('grid-rows-[0fr]');
-
-      btnText.textContent = 'Lihat Lebih Banyak';
-      btnIcon.setAttribute('data-lucide', 'chevron-down');
-
-      // 3. Scroll kembali ke awal galeri
-      document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+    if (currentIndex > maxIndex) {
+      currentIndex = 0; // Kembali ke awal jika sudah di paling akhir
+    } else if (currentIndex < 0) {
+      currentIndex = maxIndex;
     }
 
-    if (typeof lucide !== 'undefined') {
-      lucide.createIcons();
+    const percentage = (100 / visibleSlides) * currentIndex;
+    track.style.transform = `translateX(-${percentage}%)`;
+
+    renderDots();
+  }
+
+  function nextSlide() {
+    currentIndex++;
+    const visibleSlides = getVisibleSlides();
+    if (currentIndex > totalSlides - visibleSlides) {
+      currentIndex = 0;
+    }
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    currentIndex--;
+    const visibleSlides = getVisibleSlides();
+    if (currentIndex < 0) {
+      currentIndex = totalSlides - visibleSlides;
+    }
+    updateCarousel();
+  }
+
+  // Auto Slide Setiap 3.5 Detik
+  function startAutoSlide() {
+    stopAutoSlide();
+    autoSlideInterval = setInterval(() => {
+      nextSlide();
+    }, 3500);
+  }
+
+  function pauseAutoSlide() {
+    stopAutoSlide();
+  }
+
+  function stopAutoSlide() {
+    if (autoSlideInterval) {
+      clearInterval(autoSlideInterval);
     }
   }
+
+  // Render Indikator Titik (Dots)
+  function renderDots() {
+    const dotsContainer = document.getElementById('carousel-dots');
+    const visibleSlides = getVisibleSlides();
+    const totalDots = totalSlides - visibleSlides + 1;
+    
+    dotsContainer.innerHTML = '';
+
+    for (let i = 0; i < totalDots; i++) {
+      const dot = document.createElement('button');
+      dot.className = `h-2 rounded-full transition-all duration-300 ${
+        i === currentIndex ? 'w-8 bg-cyan-400' : 'w-2 bg-slate-700 hover:bg-slate-500'
+      }`;
+      dot.onclick = () => {
+        currentIndex = i;
+        updateCarousel();
+      };
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  // Re-calculate saat window di-resize
+  window.addEventListener('resize', () => {
+    updateCarousel();
+  });
+
+  // Jalankan saat pertama kali dimuat
+  document.addEventListener('DOMContentLoaded', () => {
+    updateCarousel();
+    startAutoSlide();
+  });
 </script>
 
 
@@ -456,193 +512,389 @@
     </div>
   </section>
 
-   <!-- PACKAGES SECTION -->
-  <section id="packages" class="py-24 bg-cardDark/30">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <span class="text-primary font-bold uppercase tracking-widest text-xs">Sewa Alat Murah & Berkualitas</span>
-        <h2 class="text-3xl sm:text-5xl font-black text-white font-heading">Nikmati Liburanmu Dengan Alat Yang Lebih Proper</h2>
+  <!-- PACKAGES CAROUSEL SECTION -->
+<section id="packages" class="py-24 bg-[#060a12] relative overflow-hidden">
+  
+  <!-- Ambient Background Blur Accent -->
+  <div class="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Header dengan Control Navigation di Kanan Atas -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <div>
+        <span class="text-cyan-400 font-bold uppercase tracking-widest text-xs flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          Sewa Alat Murah & Berkualitas
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white font-heading mt-3">
+          Nikmati Liburanmu Dengan <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Alat Proper</span>
+        </h2>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <!-- 1. Tiket Speed Boat -->
-      <div class="relative bg-[#0e1626] border border-slate-800 hover:border-cyan-500/50 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] group">
-        <div>
-          <div class="inline-block px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-cyan-950/80 text-cyan-400 border border-cyan-800/50 mb-4">
-            TRANSPORTASI
-          </div>
-          <h3 class="text-xl sm:text-2xl font-bold text-white font-heading mb-2">Kapal Speed Boat</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">Penyeberangan cepat & aman dari Dermaga Boddia ke Pulau Sanrobengi PP.</p>
-          
-          <div class="mb-6">
-            <span class="text-3xl sm:text-4xl font-black text-white">Rp30.000</span>
-            <span class="text-slate-400 text-xs sm:text-sm"> / pp</span>
-          </div>
-
-          <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Perahu Speed Boat Pulang Pergi</span>
-            </li>
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Termasuk Pelampung Keselamatan</span>
-            </li>
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Jadwal Penyeberangan Fleksibel</span>
-            </li>
-          </ul>
+      <!-- Navigation & Counter Controls -->
+      <div class="flex items-center gap-4 shrink-0 self-start md:self-auto">
+        <!-- Slide Counter -->
+        <div class="text-slate-400 font-mono text-sm tracking-widest hidden sm:block">
+          <span id="pkg-current-num" class="text-cyan-400 font-bold text-lg">01</span> / <span id="pkg-total-num">05</span>
         </div>
 
-        <a href="https://wa.me/628997787877?text=Halo%20admin,%20saya%20mau%20pesan%20Tiket%20Speedboat" target="_blank" class="w-full py-3.5 px-4 bg-slate-800/80 hover:bg-cyan-500 hover:text-slate-950 text-white font-bold text-sm rounded-xl transition-all duration-300 text-center block border border-slate-700/60 hover:border-cyan-400">
-          Pesan Tiket Kapal
-        </a>
+        <!-- Tombol Prev & Next -->
+        <div class="flex gap-2">
+          <button onclick="pkgPrev()" class="w-12 h-12 rounded-2xl bg-slate-900/80 hover:bg-cyan-500 hover:text-slate-950 text-white border border-slate-800 hover:border-cyan-400 transition-all duration-300 flex items-center justify-center shadow-lg active:scale-95">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button onclick="pkgNext()" class="w-12 h-12 rounded-2xl bg-slate-900/80 hover:bg-cyan-500 hover:text-slate-950 text-white border border-slate-800 hover:border-cyan-400 transition-all duration-300 flex items-center justify-center shadow-lg active:scale-95">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
       </div>
+    </div>
 
-      <!-- 2. Sewa Alat Snorkeling -->
-      <div class="relative bg-[#0e1626] border border-slate-800 hover:border-cyan-500/50 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] group">
-        <div>
-          <div class="inline-block px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-cyan-950/80 text-cyan-400 border border-cyan-800/50 mb-4">
-            PERALATAN
-          </div>
-          <h3 class="text-xl sm:text-2xl font-bold text-white font-heading mb-2">Sewa Alat Snorkeling</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">Set mask & snorkel standar untuk menikmati keindahan bawah laut Sanrobengi.</p>
-          
-          <div class="mb-6">
-            <span class="text-3xl sm:text-4xl font-black text-white">Rp50.000</span>
-            <span class="text-slate-400 text-xs sm:text-sm"> / pax</span>
-          </div>
+    <!-- Carousel Container -->
+    <div class="relative overflow-hidden" onmouseenter="pkgPauseAuto()" onmouseleave="pkgStartAuto()">
+      <div id="pkg-track" class="flex transition-transform duration-500 ease-out -mx-3">
+        
+        <!-- CARD 1: Kapal Speed Boat -->
+        <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3">
+          <div class="h-full bg-[#0e1626]/90 backdrop-blur-xl border border-slate-800 hover:border-cyan-500/60 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(6,182,212,0.25)] group relative overflow-hidden">
+            <!-- Ambient Glow Top Right -->
+            <div class="absolute -top-12 -right-12 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all duration-500"></div>
 
-          <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Masker & Snorkel Higienis</span>
-            </li>
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Pelampung (Life Jacket)</span>
-            </li>
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Penggunaan Seharian di Island</span>
-            </li>
-          </ul>
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-cyan-950/80 text-cyan-400 border border-cyan-800/50">
+                  TRANSPORTASI
+                </span>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-white font-heading mb-2 group-hover:text-cyan-300 transition-colors">Kapal Speed Boat</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">Penyeberangan cepat & aman dari Dermaga Boddia ke Pulau Sanrobengi PP.</p>
+              
+              <div class="mb-6 pb-6 border-b border-slate-800/80">
+                <span class="text-3xl sm:text-4xl font-black text-white">Rp30.000</span>
+                <span class="text-slate-400 text-xs sm:text-sm"> / pp</span>
+              </div>
+
+              <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
+                <li class="flex items-center gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span>Perahu Speed Boat Pulang Pergi</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span>Termasuk Pelampung Keselamatan</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span>Jadwal Penyeberangan Fleksibel</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="https://wa.me/628997787877?text=Halo%20admin,%20saya%20mau%20pesan%20Tiket%20Speedboat" target="_blank" class="w-full py-3.5 px-4 bg-slate-800/80 group-hover:bg-cyan-500 group-hover:text-slate-950 text-white font-bold text-sm rounded-xl transition-all duration-300 text-center flex items-center justify-center gap-2 border border-slate-700/60 group-hover:border-cyan-400 shadow-lg">
+              <span>Pesan Tiket Kapal</span>
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
         </div>
 
-        <a href="https://wa.me/628997787877?text=Halo%20admin,%20saya%20mau%20sewa%20Alat%20Snorkeling" target="_blank" class="w-full py-3.5 px-4 bg-slate-800/80 hover:bg-cyan-500 hover:text-slate-950 text-white font-bold text-sm rounded-xl transition-all duration-300 text-center block border border-slate-700/60 hover:border-cyan-400">
-          Sewa Alat Snorkel
-        </a>
-      </div>
+        <!-- CARD 2: Sewa Alat Snorkeling -->
+        <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3">
+          <div class="h-full bg-[#0e1626]/90 backdrop-blur-xl border border-slate-800 hover:border-cyan-500/60 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(6,182,212,0.25)] group relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all duration-500"></div>
 
-      <!-- 3. Sewa Tenda Camping -->
-      <div class="relative bg-[#0e1626] border border-slate-800 hover:border-cyan-500/50 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] group">
-        <div>
-          <div class="inline-block px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-cyan-950/80 text-cyan-400 border border-cyan-800/50 mb-4">
-            CAMPING
-          </div>
-          <h3 class="text-xl sm:text-2xl font-bold text-white font-heading mb-2">Sewa Tenda Dome</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">Tenda dobel layer nyaman & tahan angin pantai untuk berkemah.</p>
-          
-          <div class="mb-6">
-            <span class="text-3xl sm:text-4xl font-black text-white">Rp50.000</span>
-            <span class="text-slate-400 text-xs sm:text-sm"> / unit</span>
-          </div>
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-cyan-950/80 text-cyan-400 border border-cyan-800/50">
+                  PERALATAN
+                </span>
+              </div>
 
-          <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Kapasitas 3 - 4 Orang</span>
-            </li>
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Double Layer (Anti Hujan & Windproof)</span>
-            </li>
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Termasuk Frame & Pasak Lengkap</span>
-            </li>
-          </ul>
+              <h3 class="text-xl sm:text-2xl font-bold text-white font-heading mb-2 group-hover:text-cyan-300 transition-colors">Sewa Alat Snorkeling</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">Set mask & snorkel standar untuk menikmati keindahan bawah laut Sanrobengi.</p>
+              
+              <div class="mb-6 pb-6 border-b border-slate-800/80">
+                <span class="text-3xl sm:text-4xl font-black text-white">Rp50.000</span>
+                <span class="text-slate-400 text-xs sm:text-sm"> / pax</span>
+              </div>
+
+              <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
+                <li class="flex items-center gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span>Masker & Snorkel Higienis</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span>Pelampung (Life Jacket)</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span>Penggunaan Seharian di Island</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="https://wa.me/628997787877?text=Halo%20admin,%20saya%20mau%20sewa%20Alat%20Snorkeling" target="_blank" class="w-full py-3.5 px-4 bg-slate-800/80 group-hover:bg-cyan-500 group-hover:text-slate-950 text-white font-bold text-sm rounded-xl transition-all duration-300 text-center flex items-center justify-center gap-2 border border-slate-700/60 group-hover:border-cyan-400 shadow-lg">
+              <span>Sewa Alat Snorkel</span>
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
         </div>
 
-        <a href="https://wa.me/628997787877?text=Halo%20admin,%20saya%20mau%20sewa%20Tenda%20Camping" target="_blank" class="w-full py-3.5 px-4 bg-slate-800/80 hover:bg-cyan-500 hover:text-slate-950 text-white font-bold text-sm rounded-xl transition-all duration-300 text-center block border border-slate-700/60 hover:border-cyan-400">
-          Sewa Tenda Dome
-        </a>
-      </div>
+        <!-- CARD 3: Sewa Tenda Dome (Populer Highlight) -->
+        <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3">
+          <div class="h-full bg-[#0e1626]/90 backdrop-blur-xl border border-cyan-500/40 hover:border-cyan-400 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(6,182,212,0.3)] group relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-32 h-32 bg-cyan-500/20 rounded-full blur-2xl group-hover:bg-cyan-500/30 transition-all duration-500"></div>
 
-      <!-- 4. Dokumentasi Drone -->
-      <div class="relative bg-[#0e1626] border border-slate-800 hover:border-cyan-500/50 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] group">
-        <div>
-          <div class="inline-block px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-cyan-950/80 text-cyan-400 border border-cyan-800/50 mb-4">
-            DOKUMENTASI
-          </div>
-          <h3 class="text-xl sm:text-2xl font-bold text-white font-heading mb-2">Dokumentasi Drone</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">Pengambilan foto & video udara (cinematic aerial shot) panorama pulau.</p>
-          
-          <div class="mb-6">
-            <span class="text-3xl sm:text-4xl font-black text-white">Rp500.000</span>
-            <span class="text-slate-400 text-xs sm:text-sm"> / baterai</span>
-          </div>
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-cyan-950/80 text-cyan-400 border border-cyan-800/50">
+                  CAMPING
+                </span>
+                <span class="px-2.5 py-0.5 rounded-md text-[9px] font-black tracking-widest uppercase bg-cyan-500 text-slate-950">
+                  FAVORIT
+                </span>
+              </div>
 
-          <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Video Aerial Sinematik High Quality</span>
-            </li>
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Pengambilan Foto Udara Estetik</span>
-            </li>
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Semua File Raw & Edited Diberikan</span>
-            </li>
-          </ul>
+              <h3 class="text-xl sm:text-2xl font-bold text-white font-heading mb-2 group-hover:text-cyan-300 transition-colors">Sewa Tenda Dome</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">Tenda dobel layer nyaman & tahan angin pantai untuk berkemah.</p>
+              
+              <div class="mb-6 pb-6 border-b border-slate-800/80">
+                <span class="text-3xl sm:text-4xl font-black text-white">Rp50.000</span>
+                <span class="text-slate-400 text-xs sm:text-sm"> / unit</span>
+              </div>
+
+              <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
+                <li class="flex items-center gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span>Kapasitas 3 - 4 Orang</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span>Double Layer (Anti Hujan & Windproof)</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span>Termasuk Frame & Pasak Lengkap</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="https://wa.me/628997787877?text=Halo%20admin,%20saya%20mau%20sewa%20Dokumentasi%20Drone" target="_blank" class="w-full py-3.5 px-4 bg-slate-800/80 group-hover:bg-cyan-500 group-hover:text-slate-950 text-white font-bold text-sm rounded-xl transition-all duration-300 text-center flex items-center justify-center gap-2 border border-slate-700/60 group-hover:border-cyan-400 shadow-lg">
+              <span>Sewa Tenda Dome</span>
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
         </div>
 
-        <a href="https://wa.me/628997787877?text=Halo%20admin,%20saya%20mau%20sewa%20Dokumentasi%20Drone" target="_blank" class="w-full py-3.5 px-4 bg-slate-800/80 hover:bg-cyan-500 hover:text-slate-950 text-white font-bold text-sm rounded-xl transition-all duration-300 text-center block border border-slate-700/60 hover:border-cyan-400">
-          Sewa Jasa Drone
-        </a>
-      </div>
+        <!-- CARD 4: Dokumentasi Drone -->
+        <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3">
+          <div class="h-full bg-[#0e1626]/90 backdrop-blur-xl border border-slate-800 hover:border-cyan-500/60 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(6,182,212,0.25)] group relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all duration-500"></div>
 
-      <!-- 5. Dokumentasi Kamera Mirrorless -->
-      <div class="relative bg-[#0e1626] border border-slate-800 hover:border-cyan-500/50 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] group">
-        <div>
-          <div class="inline-block px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-cyan-950/80 text-cyan-400 border border-cyan-800/50 mb-4">
-            DOKUMENTASI
-          </div>
-          <h3 class="text-xl sm:text-2xl font-bold text-white font-heading mb-2">Kamera Mirrorless</h3>
-          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">Jasa foto & video profesional menggunakan kamera mirrorless selama kegiatan.</p>
-          
-          <div class="mb-6">
-            <span class="text-3xl sm:text-4xl font-black text-white">Rp500.000</span>
-            <span class="text-slate-400 text-xs sm:text-sm"> / trip</span>
-          </div>
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-cyan-950/80 text-cyan-400 border border-cyan-800/50">
+                  DOKUMENTASI
+                </span>
+              </div>
 
-          <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Kamera Mirrorless + Fotografer</span>
-            </li>
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Unlimited Photo & Video Shots</span>
-            </li>
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span>Editing Foto & Transfer File Cepat</span>
-            </li>
-          </ul>
+              <h3 class="text-xl sm:text-2xl font-bold text-white font-heading mb-2 group-hover:text-cyan-300 transition-colors">Dokumentasi Drone</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">Pengambilan foto & video udara (cinematic aerial shot) panorama pulau.</p>
+              
+              <div class="mb-6 pb-6 border-b border-slate-800/80">
+                <span class="text-3xl sm:text-4xl font-black text-white">Rp500.000</span>
+                <span class="text-slate-400 text-xs sm:text-sm"> / baterai</span>
+              </div>
+
+              <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
+                <li class="flex items-center gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span>Video Aerial Sinematik High Quality</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span>Pengambilan Foto Udara Estetik</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span>Semua File Raw & Edited Diberikan</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="https://wa.me/628997787877?text=Halo%20admin,%20saya%20mau%20sewa%20Dokumentasi%20Drone" target="_blank" class="w-full py-3.5 px-4 bg-slate-800/80 group-hover:bg-cyan-500 group-hover:text-slate-950 text-white font-bold text-sm rounded-xl transition-all duration-300 text-center flex items-center justify-center gap-2 border border-slate-700/60 group-hover:border-cyan-400 shadow-lg">
+              <span>Sewa Jasa Drone</span>
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
         </div>
 
-        <a href="https://wa.me/628997787877?text=Halo%20admin,%20saya%20mau%20sewa%20Dokumentasi%20Mirrorless" target="_blank" class="w-full py-3.5 px-4 bg-slate-800/80 hover:bg-cyan-500 hover:text-slate-950 text-white font-bold text-sm rounded-xl transition-all duration-300 text-center block border border-slate-700/60 hover:border-cyan-400">
-          Sewa Kamera Mirrorless
-        </a>
-      </div>
+        <!-- CARD 5: Kamera Mirrorless -->
+        <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3">
+          <div class="h-full bg-[#0e1626]/90 backdrop-blur-xl border border-slate-800 hover:border-cyan-500/60 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(6,182,212,0.25)] group relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all duration-500"></div>
+
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-cyan-950/80 text-cyan-400 border border-cyan-800/50">
+                  DOKUMENTASI
+                </span>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-white font-heading mb-2 group-hover:text-cyan-300 transition-colors">Kamera Mirrorless</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">Jasa foto & video profesional menggunakan kamera mirrorless selama kegiatan.</p>
+              
+              <div class="mb-6 pb-6 border-b border-slate-800/80">
+                <span class="text-3xl sm:text-4xl font-black text-white">Rp500.000</span>
+                <span class="text-slate-400 text-xs sm:text-sm"> / trip</span>
+              </div>
+
+              <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
+                <li class="flex items-center gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span>Kamera Mirrorless + Fotografer</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span>Unlimited Photo & Video Shots</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <div class="w-5 h-5 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                  </div>
+                  <span>Editing Foto & Transfer File Cepat</span>
+                </li>
+              </ul>
+            </div>
+
+            <a href="https://wa.me/628997787877?text=Halo%20admin,%20saya%20mau%20sewa%20Dokumentasi%20Mirrorless" target="_blank" class="w-full py-3.5 px-4 bg-slate-800/80 group-hover:bg-cyan-500 group-hover:text-slate-950 text-white font-bold text-sm rounded-xl transition-all duration-300 text-center flex items-center justify-center gap-2 border border-slate-700/60 group-hover:border-cyan-400 shadow-lg">
+              <span>Sewa Kamera Mirrorless</span>
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
 
       </div>
     </div>
-  </section>
+
+    <!-- Modern Progress Bar Indicator -->
+    <div class="mt-12 max-w-xs mx-auto bg-slate-800/60 h-1.5 rounded-full overflow-hidden">
+      <div id="pkg-progress" class="bg-gradient-to-r from-cyan-500 to-blue-500 h-full w-0 transition-all duration-500 rounded-full"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Script Khusus Packages Carousel (Independen) -->
+<script>
+  let pkgIndex = 0;
+  let pkgTimer;
+  const pkgTrack = document.getElementById('pkg-track');
+  const pkgSlides = pkgTrack.children;
+  const pkgTotal = pkgSlides.length;
+
+  function pkgGetVisible() {
+    if (window.innerWidth >= 1024) return 3; // Desktop
+    if (window.innerWidth >= 640) return 2;  // Tablet
+    return 1;                                // Mobile
+  }
+
+  function pkgUpdate() {
+    const visible = pkgGetVisible();
+    const maxIdx = pkgTotal - visible;
+
+    if (pkgIndex > maxIdx) pkgIndex = 0;
+    if (pkgIndex < 0) pkgIndex = maxIdx;
+
+    const shiftPct = (100 / visible) * pkgIndex;
+    pkgTrack.style.transform = `translateX(-${shiftPct}%)`;
+
+    // Update Counter Num
+    const currNum = document.getElementById('pkg-current-num');
+    const totalNum = document.getElementById('pkg-total-num');
+    if (currNum) currNum.innerText = String(pkgIndex + 1).padStart(2, '0');
+    if (totalNum) totalNum.innerText = String(pkgTotal).padStart(2, '0');
+
+    // Update Progress Bar Width
+    const progress = document.getElementById('pkg-progress');
+    if (progress) {
+      const pct = ((pkgIndex + 1) / (maxIdx + 1)) * 100;
+      progress.style.width = `${pct}%`;
+    }
+  }
+
+  function pkgNext() {
+    const visible = pkgGetVisible();
+    if (pkgIndex >= pkgTotal - visible) {
+      pkgIndex = 0;
+    } else {
+      pkgIndex++;
+    }
+    pkgUpdate();
+  }
+
+  function pkgPrev() {
+    const visible = pkgGetVisible();
+    if (pkgIndex <= 0) {
+      pkgIndex = pkgTotal - visible;
+    } else {
+      pkgIndex--;
+    }
+    pkgUpdate();
+  }
+
+  function pkgStartAuto() {
+    pkgStopAuto();
+    pkgTimer = setInterval(() => {
+      pkgNext();
+    }, 4000);
+  }
+
+  function pkgPauseAuto() {
+    pkgStopAuto();
+  }
+
+  function pkgStopAuto() {
+    if (pkgTimer) clearInterval(pkgTimer);
+  }
+
+  window.addEventListener('resize', pkgUpdate);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    pkgUpdate();
+    pkgStartAuto();
+  });
+</script>
   <!-- OUR MERCHANDISE SECTION -->
   <section id="merchandise" class="py-24 bg-cardDark/30 border-t border-slate-800/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
