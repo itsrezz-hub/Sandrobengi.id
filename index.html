@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Primary Meta Tags -->
+  <title>Open Trip Pulau Sanrobengi - Tropical Luxury Beach Getaway</title>
+  <meta name="title" content="Open Trip Pulau Sanrobengi - Tropical Luxury Beach Getaway">
+  <meta name="description" content="Paket Day Trip & Camping 2D1N All-Inclusive Pulau Sanrobengi Takalar. Momen sunset spektakuler, pasir putih, dan fasilitas premium.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sanrobengitrip.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sanrobengitrip.com/">
+  <meta property="og:title" content="Open Trip Pulau Sanrobengi - Tropical Luxury Beach Getaway">
+  <meta property="og:description" content="Jelajahi surga bahari Galesong Selatan, Takalar. Nikmati paket Day Trip dan Camping 2D1N dengan fasilitas lengkap.">
+  <meta property="og:image" content="assets/images/og-image.jpg">
+
+  <!-- Schema.org JSON-LD (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    "name": "Pulau Sanrobengi",
+    "description": "Destinasi wisata bahari unggulan di Galesong Selatan, Takalar, Sulawesi Selatan.",
+    "location": {
+      "@type": "Place",
+      "name": "Pulau Sanrobengi, Takalar"
+    }
+  }
+  </script>
+
+  <!-- Typography: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Third-Party CSS Frameworks & Libraries -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-dark text-slate-100 font-body antialiased selection:bg-primary selection:text-white">
+
+  <!-- LOADING SCREEN -->
+  <div id="loading-screen" class="fixed inset-0 z-[100] bg-dark flex flex-col items-center justify-center transition-opacity duration-500">
+    <div class="w-16 h-16 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+    <span class="mt-4 font-heading font-bold text-sm tracking-wider text-primary">MEMUAT PENGALAMAN TROPIS...</span>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="sticky top-0 z-40 w-full glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- LOGO GABUNGAN (GAMBAR + TEKS) -->
+      <!-- LOGO BULAT + TEKS BRAND -->
+      <a href="#" class="flex items-center gap-3 font-heading font-black text-xl sm:text-2xl tracking-tight text-white group">
+        <!-- Gambar Logo Dibuat Bulat Sempurna -->
+        <img 
+          src="assets/images/logo.png" 
+          alt="Sanrobengi.id Logo" 
+          class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover border-2 border-cyan-400/40 shadow-md shadow-cyan-500/20 group-hover:scale-105 group-hover:border-cyan-400 transition-all duration-300"
+        >
+        
+        <!-- Teks Brand -->
+        <span>SANROBENGI<span class="text-cyan-400 font-bold">.ID</span></span>
+      </a>
+      <div class="hidden lg:flex items-center gap-8 font-medium text-slate-300 text-sm">
+        <a href="#about" class="hover:text-primary transition-colors">Tentang</a>
+        <a href="#why-us" class="hover:text-primary transition-colors">Keunggulan</a>
+        <a href="#packages" class="hover:text-primary transition-colors">Paket Trip</a>
+        <a href="#gallery" class="hover:text-primary transition-colors">Galeri</a>
+        <a href="#testimonials" class="hover:text-primary transition-colors">Testimoni</a>
+        <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+      </div>
+
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20ingin%20tanya%20paket%20Open%20Trip%20Sanrobengi" target="_blank" 
+           class="relative inline-flex items-center justify-center gap-2 px-6 py-3 font-bold text-dark font-heading bg-gradient-to-r from-accent to-amber-400 rounded-full shadow-lg hover:shadow-accent/40 hover:scale-105 transition-all">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          Chat WhatsApp
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-300 hover:text-white" aria-label="Open Menu">
+        <i data-lucide="menu" class="w-7 h-7"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-cardDark/95 border-b border-slate-800 px-6 py-6 space-y-4 backdrop-blur-xl">
+      <a href="#about" class="block font-medium text-slate-200 hover:text-primary py-1">Tentang</a>
+      <a href="#why-us" class="block font-medium text-slate-200 hover:text-primary py-1">Keunggulan</a>
+      <a href="#packages" class="block font-medium text-slate-200 hover:text-primary py-1">Paket Trip</a>
+      <a href="#activities" class="block font-medium text-slate-200 hover:text-primary py-1">Aktivitas</a>
+      <a href="#gallery" class="block font-medium text-slate-200 hover:text-primary py-1">Galeri</a>
+      <a href="#testimonials" class="block font-medium text-slate-200 hover:text-primary py-1">Testimoni</a>
+      <a href="#faq" class="block font-medium text-slate-200 hover:text-primary py-1">FAQ</a>
+      <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20ingin%20tanya%20paket%20Open%20Trip%20Sanrobengi" target="_blank" 
+         class="flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-secondary text-white w-full py-3.5 rounded-xl font-bold shadow-lg">
+        <i data-lucide="message-circle" class="w-5 h-5"></i>
+        Hubungi WhatsApp Admin
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-12 pb-24">
+    <!-- Hero Video Placeholder / Background -->
+    <div class="absolute inset-0 z-0">
+      <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-30">
+        <source src="assets/video/hero-bg.mp4" type="video/mp4">
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-dark/40"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
+      <div data-aos="fade-down" class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-light border border-cyan-500/30 text-cyan-300 font-semibold text-xs sm:text-sm">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+        <i data-lucide="sparkles" class="w-4 h-4 text-accent"></i>
+        Hidden Gem in Galesong Selatan, Takalar
+      </div>
+
+      <h1 id="hero-title" class="text-4xl sm:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight font-heading">
+        Pelarian Tropis Premium di <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-amber-300">
+          Pulau Sanrobengi
+        </span>
+      </h1>
+
+      <p class="text-slate-300 text-base sm:text-xl max-w-2xl mx-auto font-normal leading-relaxed">
+        Nikmati keindahan pantai pasir putih, terumbu karang jernih, dan pemandangan sunset memukau hanya 5 menit penyeberangan.
+      </p>
+
+      <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <a href="#packages" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-extrabold text-base shadow-xl shadow-primary/30 hover:scale-105 transition-all">
+          Lihat Paket Trip
+        </a>
+        <a href="#gallery" class="w-full sm:w-auto px-8 py-4 rounded-full glass-light text-slate-200 font-bold text-base hover:bg-white/10 transition-all border border-white/10">
+          Eksplor Galeri
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-24 relative bg-darkBg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <span class="text-primary font-bold uppercase tracking-widest text-xs">Tentang Destinasi</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-white font-heading mt-2">Permata Tersembunyi di Pesisir Takalar</h2>
+          <p class="text-slate-300 mt-4 leading-relaxed">
+            Pulau Sanrobengi menawarkan pelarian tropis tanpa repot. Terkenal dengan hamparan pasir putih yang memanjang saat air surut (Pasir Timbul) dan perairan tenang yang aman untuk berenang dan berkemah.
+          </p>
+        </div>
+        <div data-aos="fade-left" class="grid grid-cols-2 gap-4">
+          <div class="glass-card p-6 rounded-2xl text-center">
+            <h3 class="text-3xl font-black text-primary font-heading">5 Min</h3>
+            <p class="text-xs text-slate-400 mt-1">Waktu Penyeberangan</p>
+          </div>
+          <div class="glass-card p-6 rounded-2xl text-center">
+            <h3 class="text-3xl font-black text-secondary font-heading">100%</h3>
+            <p class="text-xs text-slate-400 mt-1">Alami & Asri</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATISTICS SECTION -->
+  <section class="py-12 bg-cardDark/50 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div data-aos="zoom-in">
+          <p class="text-4xl font-black text-primary font-heading">1,200+</p>
+          <p class="text-xs text-slate-400 uppercase mt-1">Peserta Puas</p>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="100">
+          <p class="text-4xl font-black text-secondary font-heading">150+</p>
+          <p class="text-xs text-slate-400 uppercase mt-1">Trip Sukses</p>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="200">
+          <p class="text-4xl font-black text-accent font-heading">4.9/5</p>
+          <p class="text-xs text-slate-400 uppercase mt-1">Rating Google</p>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="300">
+          <p class="text-4xl font-black text-cyan-400 font-heading">100%</p>
+          <p class="text-xs text-slate-400 uppercase mt-1">Keamanan Terjamin</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why-us" class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-primary font-bold uppercase tracking-widest text-xs">Keunggulan Kami</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white font-heading mt-2">Mengapa Memilih SanrobengiTrip?</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div data-aos="fade-up" class="glass-card p-8 rounded-3xl space-y-4">
+          <div class="w-12 h-12 bg-primary/20 text-primary rounded-2xl flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white font-heading">Fasilitas All-Inclusive</h3>
+          <p class="text-slate-400 text-sm">Semua kebutuhan dari transportasi laut, makan, hingga perlengkapan camping sudah disediakan.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" class="glass-card p-8 rounded-3xl space-y-4">
+          <div class="w-12 h-12 bg-secondary/20 text-secondary rounded-2xl flex items-center justify-center">
+            <i data-lucide="camera" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white font-heading">Dokumentasi Gratis</h3>
+          <p class="text-slate-400 text-sm">Tim kami siap mengabadikan momen terbaikmu selama di pulau dengan kamera profesional.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200" class="glass-card p-8 rounded-3xl space-y-4">
+          <div class="w-12 h-12 bg-accent/20 text-accent rounded-2xl flex items-center justify-center">
+            <i data-lucide="user-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white font-heading">Guide Berpengalaman</h3>
+          <p class="text-slate-400 text-sm">Pemandu lokal profesional yang memastikan kenyamanan dan keselamatan perjalananmu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES SECTION -->
+  <section id="packages" class="py-24 bg-cardDark/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <span class="text-primary font-bold uppercase tracking-widest text-xs">Pilihan Paket Wisata</span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white font-heading">Paket Open Trip All-Inclusive</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Day Trip -->
+        <div data-aos="fade-up" class="rounded-3xl glass-card p-8 md:p-10 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-widest text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">Open Trip</span>
+            <h3 class="text-2xl font-black text-white mt-4 font-heading">One Day Trip (Min 10 Pax)</h3>
+            <p class="text-slate-400 text-xs mt-2">Liburan kilat seharian tanpa perlu menginap.</p>
+            <div class="my-6">
+              <span class="text-4xl font-black text-white font-heading">Rp150.000</span>
+              <span class="text-slate-400 text-xs">/ pax</span>
+            </div>
+            <ul class="space-y-3 text-slate-300 text-xs sm:text-sm">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary"></i>transportasi</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary"></i>Konsumsi</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary"></i>Padle Board</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-primary"></i>Dokumentasi Foto & Drone</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20mau%20pesan%20Paket%20Day%20Trip" target="_blank" class="mt-8 block text-center py-4 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/10 transition-all">Pesan Day Trip</a>
+        </div>
+
+        <!-- Camping 2D1N -->
+        <div data-aos="fade-up" data-aos-delay="100" class="rounded-3xl bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 p-8 md:p-10 border-2 border-primary/80 shadow-2xl flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-gradient-to-l from-accent to-amber-500 text-dark font-black text-[10px] uppercase tracking-wider px-4 py-1.5 rounded-bl-xl">POPULER</div>
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-widest text-amber-300 bg-amber-400/10 px-3 py-1 rounded-full">Private Trip</span>
+            <h3 class="text-2xl font-black text-white mt-4 font-heading">Island Camping 2D1N</h3>
+            <p class="text-slate-400 text-xs mt-2">Sensasi bermalam di bawah ribuan bintang.</p>
+            <div class="my-6">
+              <span class="text-4xl font-black text-white font-heading">Rp300.000</span>
+              <span class="text-slate-400 text-xs">/ pax</span>
+            </div>
+            <ul class="space-y-3 text-slate-200 text-xs sm:text-sm">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i>Semua Fasilitas Day Trip</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i>Tenda Dome Kapasitas 4</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i>Pesta BBQ Ikan Bakar & Api Unggun</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i>Dokumentasi Foto,Video,Drone</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/6281234567890?text=Halo%20Admin,%20saya%20mau%20pesan%20Paket%20Camping%202D1N" target="_blank" class="mt-8 block text-center py-4 rounded-2xl bg-gradient-to-r from-primary to-secondary text-white font-extrabold text-sm shadow-lg shadow-primary/30 transition-all">Pesan Slot Camping</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY MASONRY (FANCYBOX) -->
+  <section id="gallery" class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-primary font-bold uppercase tracking-widest text-xs">Galeri Momen</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white font-heading mt-2">Keindahan Pulau Sanrobengi</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <a href="assets/images/gallery-1.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
+          <img src="assets/images/gallery-1.jpg" alt="Sanrobengi Beach" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+        </a>
+        <a href="assets/images/gallery-2.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
+          <img src="assets/images/gallery-2.jpg" alt="Sanrobengi Sunset" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+        </a>
+        <a href="assets/images/gallery-3.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
+          <img src="assets/images/gallery-3.jpg" alt="Sanrobengi Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+        </a>
+        <a href="assets/images/gallery-4.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
+          <img src="assets/images/gallery-4.jpg" alt="Sanrobengi Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+        </a>
+        <a href="assets/images/gallery-5.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
+          <img src="assets/images/gallery-5.jpg" alt="Sanrobengi Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+        </a>
+        <a href="assets/images/gallery-6.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
+          <img src="assets/images/gallery-6.jpg" alt="Sanrobengi Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS (SWIPER JS) -->
+  <section id="testimonials" class="py-24 bg-cardDark/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-primary font-bold uppercase tracking-widest text-xs">Ulasan Peserta</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white font-heading mt-2">Kata Mereka Tentang Kami</h2>
+      </div>
+
+      <div class="swiper testimonialSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide glass-card p-8 rounded-3xl space-y-4">
+            <div class="flex items-center gap-1 text-accent">
+              <i data-lucide="star" class="w-4 h-4 fill-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent"></i>
+            </div>
+            <p class="text-slate-300 text-sm">"Pengalaman camping yang sangat seru! Tempatnya bersih, sunset luar biasa, dan panitianya ramah banget."</p>
+            <div class="font-bold text-white text-sm font-heading">- Andi R.</div>
+          </div>
+          <div class="swiper-slide glass-card p-8 rounded-3xl space-y-4">
+            <div class="flex items-center gap-1 text-accent">
+              <i data-lucide="star" class="w-4 h-4 fill-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent"></i>
+            </div>
+            <p class="text-slate-300 text-sm">"Pasir timbulnya pas banget buat foto-foto. Makanan ikan bakarnya nagih banget!"</p>
+            <div class="font-bold text-white text-sm font-heading">- Nurul H.</div>
+          </div>
+        </div>
+        <div class="swiper-pagination mt-8"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-primary font-bold uppercase tracking-widest text-xs">FAQ</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white font-heading mt-2">Pertanyaan Umum</h2>
+      </div>
+      <div class="space-y-4">
+        <div class="glass-card rounded-2xl p-6">
+          <h3 class="font-bold text-white text-lg font-heading">Di mana titik kumpul penyeberangan?</h3>
+          <p class="text-slate-400 text-sm mt-2">Titik kumpul berada di Dermaga Boddia, Galesong Selatan, Takalar.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6">
+          <h3 class="font-bold text-white text-lg font-heading">Apakah aman untuk anak-anak?</h3>
+          <p class="text-slate-400 text-sm mt-2">Sangat aman. Ombak di sekitar pulau relatif tenang dan perahu dilengkapi pelampung keselamatan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-darkBg border-t border-slate-800 py-12 text-center text-slate-500 text-xs">
+    <div class="max-w-7xl mx-auto px-4">
+      <p>&copy; 2026 SanrobengiTrip. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20ingin%20tanya%20Open%20Trip%20Sanrobengi" target="_blank" 
+     class="fixed bottom-6 right-6 z-50 p-4 bg-emerald-500 hover:bg-emerald-400 text-white rounded-full shadow-2xl shadow-emerald-500/50 hover:scale-110 transition-all flex items-center justify-center animate-bounce">
+    <i data-lucide="message-circle" class="w-7 h-7"></i>
+  </a>
+
+  <!-- JS Libraries -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
