@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
   }
 
-  // 2. Hide Loading Screen (Aman dari race condition saat page direload)
+  // 2. Hide Loading Screen
   const loadingScreen = document.getElementById('loading-screen');
   if (loadingScreen) {
     const hideLoading = () => {
@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Otomatis menutup menu mobile saat tautan diklik
     const mobileLinks = mobileMenu.querySelectorAll('a');
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
@@ -88,19 +87,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Inisialisasi Fancybox (Lightbox Galeri Foto + Fix Re-opening Bug)
+  // 7. Inisialisasi Fancybox (Galeri, Video Cinematic & Merchandise)
   if (typeof Fancybox !== 'undefined') {
-    // Unbind event bawaan untuk cegah double execution
-    Fancybox.unbind('[data-fancybox="gallery"]');
+    Fancybox.unbind('[data-fancybox]');
 
-    Fancybox.bind('[data-fancybox="gallery"]', {
+    Fancybox.bind('[data-fancybox]', {
       compact: false,
       idle: false,
       animated: true,
       showClass: 'f-fadeIn',
       hideClass: 'f-fadeOut',
-      Hash: false,            // Matikan perubahan URL hash agar galeri tidak terbuka lagi
-      placeFocusBack: false   // Matikan fokus otomatis kembali ke trigger elemen
+      Hash: false,            // Mencegah bug re-opening via URL Hash
+      placeFocusBack: false   // Mematikan pencetus fokus otomatis ke pemicu
     });
   }
 

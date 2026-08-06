@@ -88,11 +88,13 @@
       </a>
 
       <!-- Desktop Navigation Menu -->
-      <div class="hidden lg:flex items-center gap-8 font-medium text-slate-300 text-sm">
+      <div class="hidden lg:flex items-center gap-7 font-medium text-slate-300 text-sm">
         <a href="#about" class="hover:text-primary transition-colors">Tentang</a>
         <a href="#why-us" class="hover:text-primary transition-colors">Keunggulan</a>
         <a href="#packages" class="hover:text-primary transition-colors">Paket Trip</a>
+        <a href="#cinematic" class="hover:text-primary transition-colors">Video</a>
         <a href="#gallery" class="hover:text-primary transition-colors">Galeri</a>
+        <a href="#merchandise" class="hover:text-primary transition-colors">Merchandise</a>
         <a href="#testimonials" class="hover:text-primary transition-colors">Testimoni</a>
         <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
       </div>
@@ -115,7 +117,9 @@
       <a href="#about" class="block font-medium text-slate-200 hover:text-primary py-1">Tentang</a>
       <a href="#why-us" class="block font-medium text-slate-200 hover:text-primary py-1">Keunggulan</a>
       <a href="#packages" class="block font-medium text-slate-200 hover:text-primary py-1">Paket Trip</a>
+      <a href="#cinematic" class="block font-medium text-slate-200 hover:text-primary py-1">Video Cinematic</a>
       <a href="#gallery" class="block font-medium text-slate-200 hover:text-primary py-1">Galeri</a>
+      <a href="#merchandise" class="block font-medium text-slate-200 hover:text-primary py-1">Merchandise</a>
       <a href="#testimonials" class="block font-medium text-slate-200 hover:text-primary py-1">Testimoni</a>
       <a href="#faq" class="block font-medium text-slate-200 hover:text-primary py-1">FAQ</a>
       <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20ingin%20tanya%20paket%20Open%20Trip%20Sanrobengi" target="_blank" rel="noopener noreferrer" 
@@ -128,7 +132,6 @@
 
   <!-- HERO SECTION WITH VIDEO BACKGROUND -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-12 pb-24">
-    <!-- Hero Video Background -->
     <div class="absolute inset-0 z-0">
       <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-30">
         <source src="assets/video/hero-bg.mp4" type="video/mp4">
@@ -247,6 +250,153 @@
     </div>
   </section>
 
+  <!-- GALLERY MASONRY (FANCYBOX) -->
+<section id="gallery" class="py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-primary font-bold uppercase tracking-widest text-xs">Our Documentation</span>
+      <h2 class="text-3xl sm:text-4xl font-black text-white font-heading mt-2">Keindahan Pulau Sanrobengi</h2>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <!-- 9 Foto Utama (Selalu Tampil) -->
+      <a href="assets/images/gallery-1.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
+        <img src="assets/images/gallery-1.jpg" alt="Sanrobengi Beach" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+      </a>
+      <a href="assets/images/gallery-2.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
+        <img src="assets/images/gallery-2.jpg" alt="Sanrobengi Sunset" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+      </a>
+      <a href="assets/images/gallery-3.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
+        <img src="assets/images/gallery-3.jpg" alt="Sanrobengi Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+      </a>
+      <a href="assets/images/gallery-4.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
+        <img src="assets/images/gallery-4.jpg" alt="Sanrobengi Water Activities" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+      </a>
+      <a href="assets/images/gallery-5.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
+        <img src="assets/images/gallery-5.jpg" alt="Sanrobengi Drone View" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+      </a>
+      <a href="assets/images/gallery-6.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
+        <img src="assets/images/gallery-6.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+      </a>
+      <a href="assets/images/gallery-7.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
+        <img src="assets/images/gallery-7.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+      </a>
+      <a href="assets/images/gallery-8.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
+        <img src="assets/images/gallery-8.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+      </a>
+      <a href="assets/images/gallery-9.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
+        <img src="assets/images/gallery-9.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+      </a>
+
+      <!-- Wrapper Foto Tambahan dengan Grid Rows Smooth Height -->
+      <div id="extra-gallery" class="col-span-2 md:col-span-3 grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out">
+        <div class="overflow-hidden">
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pt-4">
+            
+            <!-- Item Tambahan (Diawali opacity-0 & translate-y-6) -->
+            <a href="assets/images/gallery-10.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
+              <img src="assets/images/gallery-10.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+            </a>
+            <a href="assets/images/gallery-11.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
+              <img src="assets/images/gallery-11.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+            </a>
+            <a href="assets/images/gallery-12.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
+              <img src="assets/images/gallery-12.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+            </a>
+            <a href="assets/images/gallery-13.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
+              <img src="assets/images/gallery-13.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+            </a>
+            <a href="assets/images/gallery-14.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
+              <img src="assets/images/gallery-14.jpg" alt="Sanrobengi Sunset View" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+            </a>
+            <a href="assets/images/gallery-15.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
+              <img src="assets/images/gallery-15.jpg" alt="Aktivitas Snorkeling Sanrobengi" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+            </a>
+            <a href="assets/images/gallery-16.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
+              <img src="assets/images/gallery-16.jpg" alt="Perahu Penyeberangan Sanrobengi" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+            </a>
+            <a href="assets/images/gallery-17.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
+              <img src="assets/images/gallery-17.jpg" alt="Keindahan Pasir Putih Sanrobengi" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+            </a>
+            <a href="assets/images/gallery-18.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
+              <img src="assets/images/gallery-18.jpg" alt="Peserta Open Trip Sanrobengi" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+            </a>
+            <a href="assets/images/gallery-19.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
+              <img src="assets/images/gallery-19.jpg" alt="Api Unggun Pantai Sanrobengi" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+            </a>
+            <a href="assets/images/gallery-20.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
+              <img src="assets/images/gallery-20.jpg" alt="Pemandangan Laut Pulau Sanrobengi" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+            </a>
+            <a href="assets/images/gallery-21.jpg" data-fancybox="gallery" class="gallery-extra-item opacity-0 translate-y-6 transition-all duration-500 ease-out overflow-hidden rounded-2xl glass-card h-64 block">
+              <img src="assets/images/gallery-21.jpg" alt="Pemandangan Laut Pulau Sanrobengi" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tombol Toggle -->
+    <div id="gallery-btn-container" class="text-center mt-12">
+      <button id="gallery-toggle-btn" onclick="toggleGallery()" class="px-8 py-3.5 bg-primary/10 hover:bg-primary text-primary hover:text-white border border-primary/30 rounded-2xl font-bold text-sm transition-all duration-300 inline-flex items-center gap-2 shadow-lg shadow-primary/10">
+        <span id="gallery-btn-text">Lihat Lebih Banyak</span>
+        <i id="gallery-btn-icon" data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Script Staggered Fade-In Animation -->
+<script>
+  function toggleGallery() {
+    const extraGallery = document.getElementById('extra-gallery');
+    const extraItems = document.querySelectorAll('.gallery-extra-item');
+    const btnText = document.getElementById('gallery-btn-text');
+    const btnIcon = document.getElementById('gallery-btn-icon');
+
+    const isOpen = extraGallery.classList.contains('grid-rows-[1fr]');
+
+    if (!isOpen) {
+      // 1. Buka kontainer tinggi
+      extraGallery.classList.remove('grid-rows-[0fr]');
+      extraGallery.classList.add('grid-rows-[1fr]');
+
+      // 2. Tampilkan tiap foto berurutan (Staggered delay 70ms)
+      extraItems.forEach((item, index) => {
+        item.style.transitionDelay = `${index * 70}ms`;
+        item.classList.remove('opacity-0', 'translate-y-6');
+        item.classList.add('opacity-100', 'translate-y-0');
+      });
+
+      btnText.textContent = 'Lihat Lebih Sedikit';
+      btnIcon.setAttribute('data-lucide', 'chevron-up');
+    } else {
+      // 1. Sembunyikan item dengan cepat tanpa jeda delay
+      extraItems.forEach((item) => {
+        item.style.transitionDelay = '0ms';
+        item.classList.remove('opacity-100', 'translate-y-0');
+        item.classList.add('opacity-0', 'translate-y-6');
+      });
+
+      // 2. Tutup kontainer tinggi
+      extraGallery.classList.remove('grid-rows-[1fr]');
+      extraGallery.classList.add('grid-rows-[0fr]');
+
+      btnText.textContent = 'Lihat Lebih Banyak';
+      btnIcon.setAttribute('data-lucide', 'chevron-down');
+
+      // 3. Scroll kembali ke awal galeri
+      document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  }
+</script>
+
+
   <!-- PACKAGES SECTION -->
   <section id="packages" class="py-24 bg-cardDark/30">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -280,18 +430,24 @@
         <div data-aos="fade-up" data-aos-delay="100" class="rounded-3xl bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 p-8 md:p-10 border-2 border-primary/80 shadow-2xl flex flex-col justify-between relative overflow-hidden">
           <div class="absolute top-0 right-0 bg-gradient-to-l from-accent to-amber-500 text-dark font-black text-[10px] uppercase tracking-wider px-4 py-1.5 rounded-bl-xl">POPULER</div>
           <div>
-            <span class="text-xs font-extrabold uppercase tracking-widest text-amber-300 bg-amber-400/10 px-3 py-1 rounded-full">Private / Open Trip</span>
-            <h3 class="text-2xl font-black text-white mt-4 font-heading">Island Camping 2D1N</h3>
+            <span class="text-xs font-extrabold uppercase tracking-widest text-amber-300 bg-amber-400/10 px-3 py-1 rounded-full">Private Trip</span>
+            <h3 class="text-2xl font-black text-white mt-4 font-heading">Island Camping 2D1N (Max 12 Pax)</h3>
             <p class="text-slate-400 text-xs mt-2">Sensasi bermalam di bawah ribuan bintang.</p>
             <div class="my-6">
-              <span class="text-4xl font-black text-white font-heading">Rp300.000</span>
+              <span class="text-4xl font-black text-white font-heading">Rp3.000.000</span>
               <span class="text-slate-400 text-xs">/ pax</span>
             </div>
             <ul class="space-y-3 text-slate-200 text-xs sm:text-sm">
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Semua Fasilitas Day Trip</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Tenda Dome Kapasitas 4</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Pesta BBQ Ikan Bakar & Api Unggun</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Dokumentasi Foto, Video, Drone</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Speedboad Pulang Dan Pergi</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> ⁠Dokumentasi Kamera Mirroless</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Paddle Board</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> ⁠Makan & Minum (Nasi,Ikan Bakar,Sayur santan,Cobek,Kelapa Muda,Semangka)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> ⁠Alat Snorkling</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> ⁠⁠Gazebo</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> ⁠⁠Guide</li>
+
+
+ 
             </ul>
           </div>
           <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20mau%20pesan%20Paket%20Camping%202D1N" target="_blank" rel="noopener noreferrer" class="mt-8 block text-center py-4 rounded-2xl bg-gradient-to-r from-primary to-secondary text-white font-extrabold text-sm shadow-lg shadow-primary/30 transition-all">Pesan Slot Camping</a>
@@ -300,36 +456,316 @@
     </div>
   </section>
 
-  <!-- GALLERY MASONRY (FANCYBOX) -->
-  <section id="gallery" class="py-24">
+   <!-- PACKAGES SECTION -->
+  <section id="packages" class="py-24 bg-cardDark/30">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-primary font-bold uppercase tracking-widest text-xs">Galeri Momen</span>
-        <h2 class="text-3xl sm:text-4xl font-black text-white font-heading mt-2">Keindahan Pulau Sanrobengi</h2>
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <span class="text-primary font-bold uppercase tracking-widest text-xs">Sewa Alat Murah & Berkualitas</span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white font-heading">Nikmati Liburanmu Dengan Alat Yang Lebih Proper</h2>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <a href="assets/images/gallery-1.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-          <img src="assets/images/gallery-1.jpg" alt="Sanrobengi Beach" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <!-- 1. Tiket Speed Boat -->
+      <div class="relative bg-[#0e1626] border border-slate-800 hover:border-cyan-500/50 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] group">
+        <div>
+          <div class="inline-block px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-cyan-950/80 text-cyan-400 border border-cyan-800/50 mb-4">
+            TRANSPORTASI
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold text-white font-heading mb-2">Kapal Speed Boat</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">Penyeberangan cepat & aman dari Dermaga Boddia ke Pulau Sanrobengi PP.</p>
+          
+          <div class="mb-6">
+            <span class="text-3xl sm:text-4xl font-black text-white">Rp30.000</span>
+            <span class="text-slate-400 text-xs sm:text-sm"> / pp</span>
+          </div>
+
+          <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Perahu Speed Boat Pulang Pergi</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Termasuk Pelampung Keselamatan</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Jadwal Penyeberangan Fleksibel</span>
+            </li>
+          </ul>
+        </div>
+
+        <a href="https://wa.me/628997787877?text=Halo%20admin,%20saya%20mau%20pesan%20Tiket%20Speedboat" target="_blank" class="w-full py-3.5 px-4 bg-slate-800/80 hover:bg-cyan-500 hover:text-slate-950 text-white font-bold text-sm rounded-xl transition-all duration-300 text-center block border border-slate-700/60 hover:border-cyan-400">
+          Pesan Tiket Kapal
         </a>
-        <a href="assets/images/gallery-2.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-          <img src="assets/images/gallery-2.jpg" alt="Sanrobengi Sunset" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+      </div>
+
+      <!-- 2. Sewa Alat Snorkeling -->
+      <div class="relative bg-[#0e1626] border border-slate-800 hover:border-cyan-500/50 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] group">
+        <div>
+          <div class="inline-block px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-cyan-950/80 text-cyan-400 border border-cyan-800/50 mb-4">
+            PERALATAN
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold text-white font-heading mb-2">Sewa Alat Snorkeling</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">Set mask & snorkel standar untuk menikmati keindahan bawah laut Sanrobengi.</p>
+          
+          <div class="mb-6">
+            <span class="text-3xl sm:text-4xl font-black text-white">Rp50.000</span>
+            <span class="text-slate-400 text-xs sm:text-sm"> / pax</span>
+          </div>
+
+          <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Masker & Snorkel Higienis</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Pelampung (Life Jacket)</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Penggunaan Seharian di Island</span>
+            </li>
+          </ul>
+        </div>
+
+        <a href="https://wa.me/628997787877?text=Halo%20admin,%20saya%20mau%20sewa%20Alat%20Snorkeling" target="_blank" class="w-full py-3.5 px-4 bg-slate-800/80 hover:bg-cyan-500 hover:text-slate-950 text-white font-bold text-sm rounded-xl transition-all duration-300 text-center block border border-slate-700/60 hover:border-cyan-400">
+          Sewa Alat Snorkel
         </a>
-        <a href="assets/images/gallery-3.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-          <img src="assets/images/gallery-3.jpg" alt="Sanrobengi Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+      </div>
+
+      <!-- 3. Sewa Tenda Camping -->
+      <div class="relative bg-[#0e1626] border border-slate-800 hover:border-cyan-500/50 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] group">
+        <div>
+          <div class="inline-block px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-cyan-950/80 text-cyan-400 border border-cyan-800/50 mb-4">
+            CAMPING
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold text-white font-heading mb-2">Sewa Tenda Dome</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">Tenda dobel layer nyaman & tahan angin pantai untuk berkemah.</p>
+          
+          <div class="mb-6">
+            <span class="text-3xl sm:text-4xl font-black text-white">Rp50.000</span>
+            <span class="text-slate-400 text-xs sm:text-sm"> / unit</span>
+          </div>
+
+          <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Kapasitas 3 - 4 Orang</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Double Layer (Anti Hujan & Windproof)</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Termasuk Frame & Pasak Lengkap</span>
+            </li>
+          </ul>
+        </div>
+
+        <a href="https://wa.me/628997787877?text=Halo%20admin,%20saya%20mau%20sewa%20Tenda%20Camping" target="_blank" class="w-full py-3.5 px-4 bg-slate-800/80 hover:bg-cyan-500 hover:text-slate-950 text-white font-bold text-sm rounded-xl transition-all duration-300 text-center block border border-slate-700/60 hover:border-cyan-400">
+          Sewa Tenda Dome
         </a>
-        <a href="assets/images/gallery-4.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-          <img src="assets/images/gallery-4.jpg" alt="Sanrobengi Water Activities" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+      </div>
+
+      <!-- 4. Dokumentasi Drone -->
+      <div class="relative bg-[#0e1626] border border-slate-800 hover:border-cyan-500/50 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] group">
+        <div>
+          <div class="inline-block px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-cyan-950/80 text-cyan-400 border border-cyan-800/50 mb-4">
+            DOKUMENTASI
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold text-white font-heading mb-2">Dokumentasi Drone</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">Pengambilan foto & video udara (cinematic aerial shot) panorama pulau.</p>
+          
+          <div class="mb-6">
+            <span class="text-3xl sm:text-4xl font-black text-white">Rp500.000</span>
+            <span class="text-slate-400 text-xs sm:text-sm"> / baterai</span>
+          </div>
+
+          <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Video Aerial Sinematik High Quality</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Pengambilan Foto Udara Estetik</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Semua File Raw & Edited Diberikan</span>
+            </li>
+          </ul>
+        </div>
+
+        <a href="https://wa.me/628997787877?text=Halo%20admin,%20saya%20mau%20sewa%20Dokumentasi%20Drone" target="_blank" class="w-full py-3.5 px-4 bg-slate-800/80 hover:bg-cyan-500 hover:text-slate-950 text-white font-bold text-sm rounded-xl transition-all duration-300 text-center block border border-slate-700/60 hover:border-cyan-400">
+          Sewa Jasa Drone
         </a>
-        <a href="assets/images/gallery-5.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-          <img src="assets/images/gallery-5.jpg" alt="Sanrobengi Drone View" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+      </div>
+
+      <!-- 5. Dokumentasi Kamera Mirrorless -->
+      <div class="relative bg-[#0e1626] border border-slate-800 hover:border-cyan-500/50 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.15)] group">
+        <div>
+          <div class="inline-block px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-cyan-950/80 text-cyan-400 border border-cyan-800/50 mb-4">
+            DOKUMENTASI
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold text-white font-heading mb-2">Kamera Mirrorless</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">Jasa foto & video profesional menggunakan kamera mirrorless selama kegiatan.</p>
+          
+          <div class="mb-6">
+            <span class="text-3xl sm:text-4xl font-black text-white">Rp500.000</span>
+            <span class="text-slate-400 text-xs sm:text-sm"> / trip</span>
+          </div>
+
+          <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Kamera Mirrorless + Fotografer</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Unlimited Photo & Video Shots</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>Editing Foto & Transfer File Cepat</span>
+            </li>
+          </ul>
+        </div>
+
+        <a href="https://wa.me/628997787877?text=Halo%20admin,%20saya%20mau%20sewa%20Dokumentasi%20Mirrorless" target="_blank" class="w-full py-3.5 px-4 bg-slate-800/80 hover:bg-cyan-500 hover:text-slate-950 text-white font-bold text-sm rounded-xl transition-all duration-300 text-center block border border-slate-700/60 hover:border-cyan-400">
+          Sewa Kamera Mirrorless
         </a>
-        <a href="assets/images/gallery-6.jpg" data-fancybox="gallery" class="overflow-hidden rounded-2xl glass-card h-64 block">
-          <img src="assets/images/gallery-6.jpg" alt="Sanrobengi Night Camping" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
-        </a>
+      </div>
+
       </div>
     </div>
   </section>
+  <!-- OUR MERCHANDISE SECTION -->
+  <section id="merchandise" class="py-24 bg-cardDark/30 border-t border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-primary font-bold uppercase tracking-widest text-xs">Oleh-Oleh & Souvenir</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white font-heading mt-2">Merchandise Resmi Sanrobengi</h2>
+        <p class="text-slate-400 text-sm mt-3">Abadikan kenangan petualanganmu dengan koleksi souvenir eksklusif edisi terbatas.</p>
+      </div>
 
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Merch Item 1 -->
+        <div data-aos="fade-up" class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group border border-slate-800">
+          <div class="relative overflow-hidden h-64 bg-slate-900">
+            <span class="absolute top-4 left-4 z-10 bg-primary text-dark font-black text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-md">Best Seller</span>
+            <a href="assets/images/foto/baju1.jpg" data-fancybox="merchandise" data-caption="Kaos Official Sanrobengi - Rp 125.000">
+              <img src="assets/images/foto/baju1.jpg" alt="Kaos Official Sanrobengi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </a>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-white text-lg font-heading">Kaos Sandrobeni.id "Holiday With Padle and Clear Skies"</h3>
+              <p class="text-slate-400 text-xs mt-1">Bahan Cotton Combed 30s premium, adem & menyerap keringat.</p>
+            </div>
+            <!-- HARGA & TOMBOL BELI -->
+            <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">Harga Resmi</span>
+                <span class="text-2xl font-black text-amber-400 font-heading">Rp 135.000</span>
+              </div>
+              <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20mau%20pesan%20Kaos%20Official%20Sanrobengi" target="_blank" rel="noopener noreferrer" 
+                 class="px-4 py-2.5 bg-primary/20 hover:bg-primary text-primary hover:text-white rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 shadow-md">
+                <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                Beli
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Merch Item 2 -->
+        <div data-aos="fade-up" data-aos-delay="100" class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group border border-slate-800">
+          <div class="relative overflow-hidden h-64 bg-slate-900">
+            <span class="absolute top-4 left-4 z-10 bg-secondary text-white font-black text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-md">Must Have</span>
+            <a href="assets/images/foto/baju2.jpg" data-fancybox="merchandise" data-caption="Waterproof Dry Bag 10L - Rp 95.000">
+              <img src="assets/images/foto/baju2.jpg" alt="Waterproof Dry Bag 10L" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </a>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-white text-lg font-heading">Kaos Official Sanrobengi.id "At Sunset"</h3>
+              <p class="text-slate-400 text-xs mt-1">Bahan Cotton Combed 30s premium,Cocok saat Senja yang Santai</p>
+            </div>
+            <!-- HARGA & TOMBOL BELI -->
+            <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">Harga Resmi</span>
+                <span class="text-2xl font-black text-amber-400 font-heading">Rp 135.000</span>
+              </div>
+              <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20mau%20pesan%20Waterproof%20Dry%20Bag" target="_blank" rel="noopener noreferrer" 
+                 class="px-4 py-2.5 bg-primary/20 hover:bg-primary text-primary hover:text-white rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 shadow-md">
+                <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                Beli
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Merch Item 3 -->
+        <div data-aos="fade-up" data-aos-delay="200" class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group border border-slate-800">
+          <div class="relative overflow-hidden h-64 bg-slate-900">
+            <a href="assets/images/foto/baju3.jpg" data-fancybox="merchandise" data-caption="Tropical Bucket Hat - Rp 75.000">
+              <img src="assets/images/foto/baju3.jpg" alt="Tropical Bucket Hat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </a>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-white text-lg font-heading">Kaos Sanrobengi.id "Save Our Sea"</h3>
+              <p class="text-slate-400 text-xs mt-1">Membeli Merchandise Kami = Mendukung Aksi Bersih Tim</p>
+            </div>
+            <!-- HARGA & TOMBOL BELI -->
+            <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">Harga Resmi</span>
+                <span class="text-2xl font-black text-amber-400 font-heading">Rp 135.000</span>
+              </div>
+              <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20mau%20pesan%20Tropical%20Bucket%20Hat" target="_blank" rel="noopener noreferrer" 
+                 class="px-4 py-2.5 bg-primary/20 hover:bg-primary text-primary hover:text-white rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 shadow-md">
+                <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                Beli
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Merch Item 4 -->
+        <div data-aos="fade-up" data-aos-delay="300" class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group border border-slate-800">
+          <div class="relative overflow-hidden h-64 bg-slate-900">
+            <span class="absolute top-4 left-4 z-10 bg-amber-400 text-dark font-black text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-md">Limited</span>
+            <a href="assets/images/foto/baju4.jpg" data-fancybox="merchandise" data-caption="Stainless Tumbler 500ml - Rp 110.000">
+              <img src="assets/images/foto/baju4.jpg" alt="Stainless Tumbler 500ml" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </a>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-white text-lg font-heading">Kaos Sandrobengi.id "At Night"</h3>
+              <p class="text-slate-400 text-xs mt-1">Sangat Cocok Di pakai Sambil Menikmati Malam Yang Tenang</p>
+            </div>
+            <!-- HARGA & TOMBOL BELI -->
+            <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">Harga Resmi</span>
+                <span class="text-2xl font-black text-amber-400 font-heading">Rp 110.000</span>
+              </div>
+              <a href="https://wa.me/628997787877?text=Halo%20Admin,%20saya%20mau%20pesan%20Stainless%20Tumbler" target="_blank" rel="noopener noreferrer" 
+                 class="px-4 py-2.5 bg-primary/20 hover:bg-primary text-primary hover:text-white rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 shadow-md">
+                <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                Beli
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- TESTIMONIALS (SWIPER JS) -->
   <section id="testimonials" class="py-24 bg-cardDark/40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -388,10 +824,92 @@
     </div>
   </section>
 
+  <!-- SOCIAL MEDIA SECTION -->
+  <section id="social-media" class="py-20 relative overflow-hidden bg-gradient-to-b from-darkBg to-cardDark/80 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-primary font-bold uppercase tracking-widest text-xs">Media Sosial</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white font-heading mt-2">Ikuti Petualangan Kami</h2>
+        <p class="text-slate-400 text-sm mt-3">Dapatkan update jadwal open trip terbaru, voucher promo eksklusif, dan keseruan dokumentasi peserta setiap minggunya.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <!-- INSTAGRAM CARD -->
+        <a href="https://www.instagram.com/sanrobengi.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" 
+           data-aos="fade-right" 
+           class="glass-card p-8 rounded-3xl border border-pink-500/20 hover:border-pink-500/60 transition-all group flex items-center justify-between bg-gradient-to-br from-pink-950/20 via-slate-900 to-slate-900">
+          <div class="flex items-center gap-5">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 flex items-center justify-center text-white shadow-lg shadow-pink-500/20 group-hover:scale-110 transition-transform">
+              <!-- Inline SVG Instagram -->
+              <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-xs font-semibold text-pink-400 uppercase tracking-wider">Instagram</span>
+              <h3 class="text-xl font-bold text-white font-heading">@sanrobengi.id</h3>
+              <p class="text-slate-400 text-xs mt-1">Foto estetik & Reels kegiatan trip</p>
+            </div>
+          </div>
+          <div class="hidden sm:flex items-center gap-1 text-xs font-bold text-pink-400 group-hover:translate-x-1 transition-transform">
+            Follow <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </div>
+        </a>
+
+        <!-- TIKTOK CARD -->
+        <a href="https://www.tiktok.com/@sanrobengi..id?_r=1&_t=ZS-98fKj1z7dFV" target="_blank" rel="noopener noreferrer" 
+           data-aos="fade-left" 
+           class="glass-card p-8 rounded-3xl border border-cyan-500/20 hover:border-cyan-500/60 transition-all group flex items-center justify-between bg-gradient-to-br from-cyan-950/20 via-slate-900 to-slate-900">
+          <div class="flex items-center gap-5">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-slate-900 via-teal-500 to-cyan-400 flex items-center justify-center text-white shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
+              <!-- Custom TikTok SVG Icon -->
+              <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-2.901 2.89 2.893 2.893 0 0 1-2.892-2.89 2.893 2.893 0 0 1 2.892-2.89c.28 0 .543.043.794.118V9.387a6.29 6.29 0 0 0-.794-.051 6.34 6.34 0 0 0-6.333 6.336 6.34 6.34 0 0 0 6.333 6.336 6.34 6.34 0 0 0 6.333-6.336V8.455a8.188 8.188 0 0 0 4.784 1.528V6.538a4.832 4.832 0 0 1-1.002-.148z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-xs font-semibold text-cyan-400 uppercase tracking-wider">TikTok</span>
+              <h3 class="text-xl font-bold text-white font-heading">@sanrobengi.id</h3>
+              <p class="text-slate-400 text-xs mt-1">Vlog seru & konten sinematik</p>
+            </div>
+          </div>
+          <div class="hidden sm:flex items-center gap-1 text-xs font-bold text-cyan-400 group-hover:translate-x-1 transition-transform">
+            Follow <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
-  <footer class="bg-darkBg border-t border-slate-800 py-12 text-center text-slate-500 text-xs">
-    <div class="max-w-7xl mx-auto px-4">
-      <p>&copy; 2026 SanrobengiTrip. All Rights Reserved.</p>
+  <footer class="bg-darkBg border-t border-slate-800/80 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <!-- Logo & Info -->
+      <div class="flex items-center gap-3">
+        <img src="assets/images/logo.png" alt="Sanrobengi Logo" class="w-8 h-8 rounded-full border border-cyan-400/40">
+        <span class="font-heading font-bold text-white text-base">SANROBENGI<span class="text-cyan-400">.ID</span></span>
+      </div>
+
+      <!-- Copyright -->
+      <p class="text-center">&copy; 2026 Sanrobengiid. All Rights Reserved. Private & Open Trip Organizer.</p>
+
+      <!-- Social Links Mini -->
+      <div class="flex items-center gap-4">
+        <!-- Instagram Mini -->
+        <a href="https://www.instagram.com/sanrobengi.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="p-2.5 bg-slate-800 hover:bg-pink-600 text-slate-300 hover:text-white rounded-full transition-all flex items-center justify-center" aria-label="Instagram">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+
+        <!-- TikTok Mini -->
+        <a href="https://www.tiktok.com/@sanrobengi..id?_r=1&_t=ZS-98fKj1z7dFV" target="_blank" rel="noopener noreferrer" class="p-2.5 bg-slate-800 hover:bg-cyan-500 text-slate-300 hover:text-white rounded-full transition-all flex items-center justify-center" aria-label="TikTok">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-2.901 2.89 2.893 2.893 0 0 1-2.892-2.89 2.893 2.893 0 0 1 2.892-2.89c.28 0 .543.043.794.118V9.387a6.29 6.29 0 0 0-.794-.051 6.34 6.34 0 0 0-6.333 6.336 6.34 6.34 0 0 0 6.333 6.336 6.34 6.34 0 0 0 6.333-6.336V8.455a8.188 8.188 0 0 0 4.784 1.528V6.538a4.832 4.832 0 0 1-1.002-.148z"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </footer>
 
